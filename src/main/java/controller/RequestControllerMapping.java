@@ -1,64 +1,27 @@
 package controller;
 
-import java.util.HashMap;
-import java.util.Map;
 import controller.RequestMap;
-import controller.QnA.QnAListViewController;
-import controller.QnA.QnAReadViewController;
-import controller.QnA.QnAUdateActionController;
-import controller.QnA.QnAUdateViewController;
-import controller.QnA.QnAWriteActionController;
-import controller.QnA.QnAWriteViewController;
-import controller.admin.Admin_StoreReadViewController;
-import controller.admin.ownerInformationViewController;
-import controller.admin.ownerProfileViewController;
-import controller.admin.userInformationViewController;
-import controller.admin.userProfileViewController;
-import controller.community.DeleteCommunityActionController;
-import controller.community.ListCommunityViewController;
-import controller.community.ReadCommunityViewController;
-import controller.community.ReplyActionController;
-import controller.community.UpdateCommunityActionController;
-import controller.community.UpdateCommunityViewController;
-import controller.community.WriteActionController;
-import controller.community.WriteViewController;
+import controller.QnA.*;
+import controller.admin.*;
+import controller.community.*;
 import controller.favorite.DeleteFavoriteActionController;
 import controller.favorite.FavoriteActionController;
 import controller.favorite.UserFavoriteViewController;
 import controller.home.HomeViewController;
-import controller.login.FindPasswordViewController;
-import controller.login.LoginActionController;
-import controller.login.LoginForReserveViewController;
-import controller.login.LoginViewController;
-import controller.login.LogoutActionController;
-import controller.login.MailCheckController;
-import controller.login.MailCheckViewController;
-import controller.login.ResetPasswordActionController;
-import controller.login.ResetPasswordViewController;
-import controller.login.SignUpActionController;
-import controller.login.UserInfoActionController;
-import controller.login.UserInfoViewController;
-import controller.menu.DeleteMenuActionController;
-import controller.menu.MenuListViewController;
-import controller.menu.RegisterMenuActionController;
-import controller.menu.RegisterMenuViewController;
-import controller.menu.UpdateMenuActionController;
-import controller.menu.UpdateMenuViewController;
+import controller.login.*;
+import controller.menu.*;
 import controller.myPage.MyPageViewController;
 import controller.myPage.UserReadViewController;
 import controller.myPage.UserUpdateActionController;
 import controller.myPage.UserUpdateViewController;
 import controller.reserve.ReservationViewController;
 import controller.search.SearchViewController;
-import controller.store.DeleteStoreActionController;
-import controller.store.RegisterStoreActionController;
-import controller.store.RegisterStoreViewController;
-import controller.store.StoreListViewController;
-import controller.store.StoreReadViewController;
-import controller.store.UpdateStoreActionController;
-import controller.store.UpdateStoreViewController;
+import controller.store.*;
 import controller.table.RegisterTableActionController;
 import controller.table.RegisterTableViewController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RequestControllerMapping {
 	private static final Map<RequestMap,Controller> mapping = new HashMap<>();
@@ -68,7 +31,7 @@ public class RequestControllerMapping {
 		mapping.put(new RequestMap("/home","GET"), new HomeViewController());
 		
 		//로그아웃 후 홈으로 이동
-		mapping.put(new RequestMap("/index", "GET"), new LogoutActionController());
+		mapping.put(new RequestMap("/index", "GET"), new LogoutActionController()); 
 
 		//로그인/로그아웃/회원가입/비밀번호 변경
 		mapping.put(new RequestMap("/jsp/login/login","GET"), new LoginViewController());
