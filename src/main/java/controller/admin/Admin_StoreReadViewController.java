@@ -1,7 +1,6 @@
 package controller.admin;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -20,8 +19,7 @@ public class Admin_StoreReadViewController implements Controller {
 		public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
 			StoreInfoDAO dao = StoreInfoDAO.getStoreInfoDAO();
-			List<StoreInfo> list = dao.selectAll();
-			Collections.shuffle(list);
+			List<StoreInfo> list = dao.selectDesc();
 			request.setAttribute("list", list);
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("admin_StoreInformation.jsp");

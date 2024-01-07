@@ -2,7 +2,7 @@ package controller;
 
 import java.util.HashMap;
 import java.util.Map;
-
+import controller.RequestMap;
 import controller.QnA.QnAListViewController;
 import controller.QnA.QnAReadViewController;
 import controller.QnA.QnAUdateActionController;
@@ -59,7 +59,6 @@ import controller.store.UpdateStoreActionController;
 import controller.store.UpdateStoreViewController;
 import controller.table.RegisterTableActionController;
 import controller.table.RegisterTableViewController;
-
 
 public class RequestControllerMapping {
 	private static final Map<RequestMap,Controller> mapping = new HashMap<>();

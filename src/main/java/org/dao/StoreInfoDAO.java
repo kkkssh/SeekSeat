@@ -62,6 +62,13 @@ public class StoreInfoDAO {
 		mapper.close();
 		return results;
 	}// ~ selectAll end
+	// 매장 전체 조회
+	public List<StoreInfo> selectDesc(){
+		SqlSession mapper = SqlSessionBean.getSession();
+		List<StoreInfo> results = mapper.selectList("StoreInfo.selectDesc");
+		mapper.close();
+		return results;
+	}// ~ selectAll end
 	
 	// 사장(owner) 별 매장 조회
 	public List<StoreInfo> selectByOwner(String owner_id){

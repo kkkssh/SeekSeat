@@ -50,6 +50,11 @@
 		SELECT * 
 		FROM storeinfo
     </select>
+    <select id="selectDesc" resultType="StoreInfo">
+		SELECT rownum, a.*
+		FROM (SELECT * FROM STOREINFO) a
+		ORDER BY rownum DESC
+    </select>
 
     <!-- 사장(owner) 별 매장 조회 -->
     <select id="selectByOwner" parameterType="String" resultType="StoreInfo">

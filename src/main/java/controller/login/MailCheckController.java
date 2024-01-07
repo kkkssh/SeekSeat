@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Random;
 
 import javax.mail.Message;
 import javax.mail.Session;
@@ -38,7 +37,6 @@ public class MailCheckController implements Controller {
 	private static String code = "";
 	@Override
 	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		code = new MailCheckController().random();
 
 		String id = request.getParameter("id");
 		String email = request.getParameter("email");
@@ -129,31 +127,4 @@ public class MailCheckController implements Controller {
 		}
 	}//sendNotiMail end
 	
-	//인증 코드 난수 생성 메소드
-	public String random() {
-		String code = null;
-		
-		StringBuffer tmp = new StringBuffer();
-		Random rnd = new Random();
-		
-		for (int i = 0; i < 6; i++) {
-			int rndIdx = rnd.nextInt(3);
-			switch(rndIdx) {
-			case 0:
-				// a-z
-				tmp.append((char) ((int) (rnd.nextInt(26)) + 97));
-				break;
-			case 1:
-				// A-Z
-				tmp.append((char) ((int) (rnd.nextInt(26)) + 65));
-				break;
-			case 2:
-				// 0-9
-				tmp.append(rnd.nextInt(10));
-				break;
-			}
-		}
-		code = tmp.toString();
-		return code;
-	}//random end
 }

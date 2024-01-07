@@ -130,7 +130,7 @@
                   <input id="name${status.index+1}" type="hidden" value="${list.name}">
                </c:forEach>
                <input type="hidden" id="size" value="${size}">
-               <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=&libraries=services"></script>
+               <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
                <script>
                // 마커를 담을 배열입니다
                   var markers = [];

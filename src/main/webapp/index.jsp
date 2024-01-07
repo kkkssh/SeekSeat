@@ -15,7 +15,7 @@
 			<div class="inner">
 				<header>
 					<h1><a href="home" id="logo">SEEK SEAT</a></h1>
-					<h5>in GangNam</h5>
+					<h5>in GangNam</h5> 
 					<hr>
 					<form action="jsp/search/search" method="get">
 					<div class="search-container">

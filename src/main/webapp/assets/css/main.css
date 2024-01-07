@@ -1897,9 +1897,9 @@ header .icon.circled {
 /* Header */
 #header {
    position: relative;
-   /* background-image: url("../../images/header.jpg"); */
-   background: linear-gradient(to left, rgb(0, 128, 255),
-      rgb(128, 128, 192));
+   background-image: url("images/SeekSeat.png"); 
+  /*  background: linear-gradient(to left, rgb(0, 128, 255),
+      rgb(128, 128, 192)); */
    background-size: cover;
    background-position: center center;
    background-attachment: fixed;
@@ -2051,6 +2051,7 @@ body.homepage.is-preload #header:after {
    margin: -9px 0.5em 0 0.5em;
    border-radius: 0.5em;
    padding: 0.85em;
+   color: black;
    border: solid 1px transparent;
    -moz-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
    -webkit-transition: color 0.35s ease-in-out, border-color 0.35s
